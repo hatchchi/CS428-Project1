@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/RoswellScene.unity
-    guid: 9ed29c3d869964f0fb78b68ddf1dade8
+    path: Assets/Scenes/stonehenge-scene.unity
+    guid: 1f420c337c5ca1940a9dd9c96d771cf7
   m_configObjects: {}
