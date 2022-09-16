@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class timeTeller : MonoBehaviour
+public class BBTimeTeller : MonoBehaviour
 {
     public GameObject timeTextObject;
 
@@ -16,8 +16,9 @@ public class timeTeller : MonoBehaviour
     // Update is called once per frame
     void UpdateTime()
     {
-        timeTextObject.GetComponent<TextMeshPro>().text = System.DateTime.Now.AddHours(6).ToString("hh:mm tt");
+        timeTextObject.GetComponent<TextMeshPro>().text = System.DateTime.Now.AddHours(7).ToString("HH:mm");
+        // timeTextObject.GetComponent<TextMeshPro>().text = System.DateTime.Now.ToString("h:mm");
 
     }
-    
+
 }
