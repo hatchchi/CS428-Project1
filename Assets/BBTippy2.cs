@@ -7,6 +7,8 @@ public class BBTippy2 : MonoBehaviour
     public GameObject Brandenburg;
     public GameObject eastLight;
     public GameObject westLight;
+    public GameObject westFlag;
+    public GameObject eastFlag;
     public bool BBwasFlipped;
     public bool BBstartingLight;
     float BBrotAngle;
@@ -58,12 +60,16 @@ public class BBTippy2 : MonoBehaviour
                     BBstartingLight = false;
                     eastLight.SetActive(false);
                     westLight.SetActive(true);
+                    westFlag.SetActive(true);
+                    eastFlag.SetActive(false);
                 }
                 else
                 {
                     BBstartingLight = true;
                     eastLight.SetActive(true);
                     westLight.SetActive(false);
+                    westFlag.SetActive(false);
+                    eastFlag.SetActive(true);
                 }
             }
         }

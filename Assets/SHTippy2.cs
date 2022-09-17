@@ -7,6 +7,7 @@ public class SHTippy2 : MonoBehaviour
     public GameObject Stonehenge;
     public GameObject myFire;
     public GameObject myBeams;
+
     public bool wasFlipped;
     public bool startingLight;
     float rotAngle;
@@ -17,6 +18,7 @@ public class SHTippy2 : MonoBehaviour
         wasFlipped = false;
         InvokeRepeating("trackPosition", 1f, 1f);
         startingLight = true;
+        
     }
     void trackPosition()
     {
@@ -33,6 +35,11 @@ public class SHTippy2 : MonoBehaviour
         }
         else
         { rotAngle = z;
+        }
+
+        if ( (rotAngle > 1) && (startingLight == true) )
+        {
+            myFire.SetActive(true);
         }
 
         //if box is upright and has already been triggered, reset trigger ready for next tip
@@ -54,6 +61,7 @@ public class SHTippy2 : MonoBehaviour
                     startingLight = false;
                     myFire.SetActive (false);
                     myBeams.SetActive(true);
+                    
                 }
                 else
                 {
